@@ -95,10 +95,10 @@ body <- dashboardBody(
             selected = "Smoky"
           ),
           submitButton("Seach Whisky!"),
-          width = 5, height = 300),
+          width = 5, height = 400),
         box(
           plotOutput(outputId = "score_viz"),
-          width = 7, height = 300
+          width = 7, height = 400
           ),
         box(
           DT::dataTableOutput(outputId = "whisky_table"),

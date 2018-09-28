@@ -64,10 +64,12 @@ server <- function (input, output){
     selected_whisky_score() %>% 
       ggplot(aes(x=Review.point, y = Score, fill = Review.point)) + 
       geom_bar(stat = "identity") + 
-      theme(axis.title.x=element_blank(),
+      theme(legend.position = c(.85, .25),
+            axis.title.x=element_blank(),
             axis.text.x=element_blank(),
             axis.ticks.x=element_blank(),
-            strip.text = element_text(size=12)) + 
+            strip.text = element_text(size=12)) +
+      guides(fill = guide_legend(nrow = 6)) +
       facet_wrap(~ Distillery)
     
   )
