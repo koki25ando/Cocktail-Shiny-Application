@@ -54,6 +54,8 @@ body <- dashboardBody(
       )
     ),
     
+###--------- Cocktail Recommendation Page --------------------------------
+    
     tabItem(tabName = "cocktail_recommendation",
       fluidRow(
         box(
@@ -63,9 +65,32 @@ body <- dashboardBody(
             choices = c("Gin"),
             selected = "Gin"
           ),
+          selectInput(
+            inputId = "main_liquor",
+            label = "Select Main Liquor: ",
+            choices = unique(gin.tidy$Element),
+            selected = " London Dry Gin "
+          ),
+          selectInput(
+            inputId = "2nd_element",
+            label = "Select 2nd Liquor: ",
+            choices = unique(gin.tidy$Element),
+            selected = " Milk "
+          ),
+          selectInput(
+            inputId = "3rd_element",
+            label = "Select 3rd Liquor: ",
+            choices = unique(gin.tidy$Element),
+            selected = " Milk "
+          ),
+          selectInput(
+            inputId = "4th_element",
+            label = "Select 4th Liquor: ",
+            choices = unique(gin.tidy$Element),
+            selected = " Milk "
+          ),
           submitButton("Seach Cocktail!"),
-          # width = 4, height = 250
-          width = 4, height = 250
+          width = 4, height = 450
         ),
         box(
           tableOutput(outputId = "ranking_table"),
