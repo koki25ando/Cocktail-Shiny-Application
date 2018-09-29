@@ -68,7 +68,8 @@ server <- function (input, output){
             axis.title.x=element_blank(),
             axis.text.x=element_blank(),
             axis.ticks.x=element_blank(),
-            strip.text = element_text(size=12)) +
+            strip.text = element_text(size=12),
+            legend.text = element_text(size = 15)) +
       guides(fill = guide_legend(nrow = 6)) +
       facet_wrap(~ Distillery)
     
