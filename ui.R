@@ -62,31 +62,31 @@ body <- dashboardBody(
           selectInput(
             inputId = "base_liquor",
             label = "Select Base Liquour: ",
-            choices = c("Gin"),
+            choices = c("Gin", "Rum", "Vodka"),
             selected = "Gin"
           ),
           selectInput(
             inputId = "main_liquor",
             label = "Select Main Liquor: ",
-            choices = unique(gin.tidy$Element),
+            choices = unique(cocktail.reco$Element),
             selected = " London Dry Gin "
           ),
           selectInput(
             inputId = "2nd_element",
             label = "Select 2nd Liquor: ",
-            choices = unique(gin.tidy$Element),
+            choices = unique(cocktail.reco$Element),
             selected = " Milk "
           ),
           selectInput(
             inputId = "3rd_element",
             label = "Select 3rd Liquor: ",
-            choices = unique(gin.tidy$Element),
+            choices = unique(cocktail.reco$Element),
             selected = " Milk "
           ),
           selectInput(
             inputId = "4th_element",
             label = "Select 4th Liquor: ",
-            choices = unique(gin.tidy$Element),
+            choices = unique(cocktail.reco$Element),
             selected = " Milk "
           ),
           submitButton("Seach Cocktail!"),

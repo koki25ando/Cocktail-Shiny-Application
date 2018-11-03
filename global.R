@@ -11,12 +11,12 @@ gin.cocktail <- read.csv("https://s3-ap-southeast-2.amazonaws.com/koki25ando/Gin
 
 ## Data Transforming for recommendation system
 
-gin.tidy <- gin.cocktail[,c(2,10,12:15)] %>% 
+cocktail.reco <- gin.cocktail[,c(2,10,12:15)] %>% 
   na.omit() %>% 
   unique()
 
-cocktail.reco <- gin.tidy %>% 
-  spread(key = Ingredient, value = Element)
+# cocktail.reco <- gin.tidy %>% 
+#   spread(key = Ingredient, value = Element)
 
 
 
